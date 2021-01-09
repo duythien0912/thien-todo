@@ -10,10 +10,17 @@ This is a practice for Redux Architecture is using Redux + Redux Epics + Hive wh
 - [equatable](https://pub.dartlang.org/packages/equatable)
 - [hiveDb](https://github.com/hivedb/hive)
 
-# Demo
+# Demo Gif
 
-<img align="left" width="300" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/demo.gif">
-<img align="left" width="300" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/1.png">
-<img align="left" width="300" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/2.png">
-<img align="left" width="300" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/3.png">
-<img align="left" width="300" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/4.png">
+<img align="left" width="30%" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/demo.gif">
+
+
+<br/>\
+
+# Demo Img
+
+<img align="center" width="24%" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/1.png">
+<img align="left" width="24%" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/2.png">
+<img align="left" width="24%" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/3.png">
+<img align="left" width="24%" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/4.png">
+
