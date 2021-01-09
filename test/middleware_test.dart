@@ -8,7 +8,7 @@ void main() {
   group('State Middleware', () {
     test('call action AddToDoAction', () async {
       final TodoRepositorys repository = TodoRepositorys();
-      await repository.init();
+      await repository.init(isFlutter: false);
       await repository.clear();
       final epicTester = epics(repository);
       expect(epicTester, isA<Epic<AppState>>());
