@@ -15,7 +15,7 @@ This is a practice for Redux Architecture is using Redux + Redux Epics + Hive wh
 <img align="left" width="30%" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/demo.gif">
 
 
-<br/>\
+<br/>
 
 # Demo Img
 
