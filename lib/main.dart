@@ -5,14 +5,13 @@ import 'package:hive_flutter/hive_flutter.dart';
 import 'package:oktoast/oktoast.dart';
 import 'package:redux/redux.dart';
 import 'package:redux_epics/redux_epics.dart';
-import 'package:todos/page/about.dart';
-import 'package:todos/repositorys/repositorys.dart';
 
 import 'actions/action.dart';
 import 'app.dart';
 import 'epics/epics.dart';
-import 'models/todo.dart';
+import 'page/about.dart';
 import 'reducers/reducers.dart';
+import 'repositorys/repositorys.dart';
 import 'states/states.dart';
 import 'styles.dart';
 
