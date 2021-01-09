@@ -23,7 +23,8 @@ class ListTodo extends StatefulWidget {
   _ListTodoState createState() => _ListTodoState();
 }
 
-class _ListTodoState extends State<ListTodo> with AutomaticKeepAliveClientMixin<ListTodo> {
+class _ListTodoState extends State<ListTodo>
+    with AutomaticKeepAliveClientMixin<ListTodo> {
   @override
   bool get wantKeepAlive => true;
 
@@ -82,7 +83,8 @@ class _ListTodoState extends State<ListTodo> with AutomaticKeepAliveClientMixin<
               Styles.BoxH12,
               Text(
                 'Add your first ToDO',
-                style: Styles.headline5(context).copyWith(fontWeight: FontWeight.bold),
+                style: Styles.headline5(context)
+                    .copyWith(fontWeight: FontWeight.bold),
               ),
               Styles.BoxH8,
               FlatButton(
@@ -135,7 +137,10 @@ class _ListTodoState extends State<ListTodo> with AutomaticKeepAliveClientMixin<
                           '${value.title}',
                           style: Styles.todoTextStyle(
                             context,
-                          ).copyWith(decoration: value.complete ?? false ? TextDecoration.lineThrough : TextDecoration.none),
+                          ).copyWith(
+                              decoration: value.complete ?? false
+                                  ? TextDecoration.lineThrough
+                                  : TextDecoration.none),
                         ),
                       ),
                       IconButton(

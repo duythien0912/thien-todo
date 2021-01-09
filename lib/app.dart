@@ -43,7 +43,8 @@ class TodoAppState extends State<TodoApp> {
   Widget build(BuildContext context) {
     return DoubleTapBackExitApp(
       child: StoreConnector<AppState, BottomNavigationSelector>(
-        converter: (Store<AppState> store) => BottomNavigationSelector.create(store),
+        converter: (Store<AppState> store) =>
+            BottomNavigationSelector.create(store),
         distinct: true,
         builder: (context, BottomNavigationSelector state) => Scaffold(
             body: SafeArea(
@@ -54,14 +55,20 @@ class TodoAppState extends State<TodoApp> {
                   Styles.BoxH8,
                   Padding(
                     padding: Styles.paddingW16,
-                    child: Container(color: Styles.todoTextStyle(context).color.withOpacity(0.1), height: 1),
+                    child: Container(
+                        color: Styles.todoTextStyle(context)
+                            .color
+                            .withOpacity(0.1),
+                        height: 1),
                   ),
                   Expanded(
                     child: PageView(
                       controller: pageController,
                       onPageChanged: (index) {
-                        final String indexName = '${homeViews[index].runtimeType}';
-                        if (state.bottomSelectIndex != indexName) state.onChangedPage(indexName);
+                        final String indexName =
+                            '${homeViews[index].runtimeType}';
+                        if (state.bottomSelectIndex != indexName)
+                          state.onChangedPage(indexName);
                       },
                       children: homeViews,
                     ),
@@ -73,7 +80,8 @@ class TodoAppState extends State<TodoApp> {
               currentIndex: homeViewsType.indexOf(state.bottomSelectIndex),
               onTap: (index) {
                 final String indexName = '${homeViews[index].runtimeType}';
-                if (state.bottomSelectIndex != indexName) state.onChangedPage(indexName);
+                if (state.bottomSelectIndex != indexName)
+                  state.onChangedPage(indexName);
                 pageController.jumpToPage(index);
               },
               items: buildBottomNavBarItems(),
@@ -85,8 +93,10 @@ class TodoAppState extends State<TodoApp> {
   List<BottomNavigationBarItem> buildBottomNavBarItems() {
     return [
       const BottomNavigationBarItem(icon: Icon(Icons.home), label: 'All'),
-      const BottomNavigationBarItem(icon: Icon(Icons.check_circle), label: 'Complete'),
-      const BottomNavigationBarItem(icon: Icon(Icons.check_circle_outlined), label: 'Incomplete'),
+      const BottomNavigationBarItem(
+          icon: Icon(Icons.check_circle), label: 'Complete'),
+      const BottomNavigationBarItem(
+          icon: Icon(Icons.check_circle_outlined), label: 'Incomplete'),
     ];
   }
 }

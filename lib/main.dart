@@ -44,7 +44,8 @@ class MyApp extends StatelessWidget {
       store: store,
       child: OKToast(
         backgroundColor: Colors.black54,
-        textPadding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
+        textPadding:
+            const EdgeInsets.symmetric(horizontal: 16.0, vertical: 10.0),
         radius: 20.0,
         position: ToastPosition.bottom,
         child: MaterialApp(

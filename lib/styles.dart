@@ -23,7 +23,10 @@ class Styles {
   }
 
   static TextStyle headline(BuildContext context) {
-    return Theme.of(context).textTheme.headline4.copyWith(fontWeight: FontWeight.bold);
+    return Theme.of(context)
+        .textTheme
+        .headline4
+        .copyWith(fontWeight: FontWeight.bold);
   }
 
   static TextStyle headline5(BuildContext context) {

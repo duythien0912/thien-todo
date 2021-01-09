@@ -50,7 +50,8 @@ class _TodoModalState extends State<TodoModal> {
                   children: [
                     Text(
                       isCreate ? 'Add your ToDO task' : 'Edit ToDO task',
-                      style: Styles.headline5(context).copyWith(fontWeight: FontWeight.bold),
+                      style: Styles.headline5(context)
+                          .copyWith(fontWeight: FontWeight.bold),
                     ),
                     const Spacer(),
                     GestureDetector(
@@ -65,7 +66,8 @@ class _TodoModalState extends State<TodoModal> {
                 Styles.BoxH16,
                 Container(
                   child: StoreConnector<AppState, ToDoSelector>(
-                    converter: (Store<AppState> store) => ToDoSelector.create(store),
+                    converter: (Store<AppState> store) =>
+                        ToDoSelector.create(store),
                     builder: (context, ToDoSelector state) => TextFormField(
                       maxLines: 3,
                       minLines: null,
@@ -108,7 +110,8 @@ class _TodoModalState extends State<TodoModal> {
                 SizedBox(
                   width: double.infinity,
                   child: StoreConnector<AppState, ToDoSelector>(
-                    converter: (Store<AppState> store) => ToDoSelector.create(store),
+                    converter: (Store<AppState> store) =>
+                        ToDoSelector.create(store),
                     builder: (context, ToDoSelector state) => FlatButton(
                       color: Styles.primaryColor(context),
                       child: const Text(

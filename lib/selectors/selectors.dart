@@ -6,16 +6,19 @@ import '../states/states.dart';
 
 List<ToDoData> todosSelector(AppState state) => state.todoData;
 
-int numActiveSelector(List<ToDoData> todos) => todos.fold(0, (sum, todo) => !todo.complete ? ++sum : sum);
+int numActiveSelector(List<ToDoData> todos) =>
+    todos.fold(0, (sum, todo) => !todo.complete ? ++sum : sum);
 
-int numCompletedSelector(List<ToDoData> todos) => todos.fold(0, (sum, todo) => todo.complete ? ++sum : sum);
+int numCompletedSelector(List<ToDoData> todos) =>
+    todos.fold(0, (sum, todo) => todo.complete ? ++sum : sum);
 
 class BottomNavigationSelector {
   BottomNavigationSelector({this.bottomSelectIndex, this.onChangedPage});
 
   factory BottomNavigationSelector.create(Store<AppState> store) {
     void _onChangedPage(String _pageName) {
-      if (store.state.bottomSelectPage != _pageName) store.dispatch(PageChangedAction(_pageName));
+      if (store.state.bottomSelectPage != _pageName)
+        store.dispatch(PageChangedAction(_pageName));
     }
 
     return BottomNavigationSelector(

@@ -19,12 +19,19 @@ Epic<AppState> epics(TodoRepositorys todoRepositorys) {
 }
 
 Epic<AppState> todoEpic(TodoRepositorys todoRepositorys) =>
-    (Stream<dynamic> actions, _) => actions.whereType<InitTodoAction>().switchMap(todoRepositorys.initTodo);
+    (Stream<dynamic> actions, _) =>
+        actions.whereType<InitTodoAction>().switchMap(todoRepositorys.initTodo);
 Epic<AppState> addToDoEpic(TodoRepositorys todoRepositorys) =>
-    (Stream<dynamic> actions, _) => actions.whereType<AddToDoAction>().switchMap(todoRepositorys.addToDo);
+    (Stream<dynamic> actions, _) =>
+        actions.whereType<AddToDoAction>().switchMap(todoRepositorys.addToDo);
 Epic<AppState> updateTodoEpic(TodoRepositorys todoRepositorys) =>
-    (Stream<dynamic> actions, _) => actions.whereType<UpdateTodoAction>().switchMap(todoRepositorys.updateTodo);
+    (Stream<dynamic> actions, _) => actions
+        .whereType<UpdateTodoAction>()
+        .switchMap(todoRepositorys.updateTodo);
 Epic<AppState> deleteTodoEpic(TodoRepositorys todoRepositorys) =>
-    (Stream<dynamic> actions, _) => actions.whereType<DeleteTodoAction>().switchMap(todoRepositorys.deleteTodo);
+    (Stream<dynamic> actions, _) => actions
+        .whereType<DeleteTodoAction>()
+        .switchMap(todoRepositorys.deleteTodo);
 Epic<AppState> clearEpic(TodoRepositorys todoRepositorys) =>
-    (Stream<dynamic> actions, _) => actions.whereType<ClearAction>().switchMap(todoRepositorys.clearAction);
+    (Stream<dynamic> actions, _) =>
+        actions.whereType<ClearAction>().switchMap(todoRepositorys.clearAction);

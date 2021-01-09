@@ -28,7 +28,8 @@ class _DoubleTapBackExitAppState extends State<DoubleTapBackExitApp> {
   }
 
   Future<bool> _isExit() async {
-    if (_lastTime == null || DateTime.now().difference(_lastTime) > widget.duration) {
+    if (_lastTime == null ||
+        DateTime.now().difference(_lastTime) > widget.duration) {
       _lastTime = DateTime.now();
       Toast.show('Tap back again to exit app');
       return Future.value(false);

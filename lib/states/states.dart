@@ -9,8 +9,10 @@ class AppState extends Equatable {
   AppState({
     @required this.bottomSelectPage,
     @required this.todoData,
-  })  : todoDataComplete = todoData.where((element) => element.complete == true).toList(),
-        todoDataInComplete = todoData.where((element) => element.complete == false).toList();
+  })  : todoDataComplete =
+            todoData.where((element) => element.complete == true).toList(),
+        todoDataInComplete =
+            todoData.where((element) => element.complete == false).toList();
 
   static AppState initialState() {
     return AppState(

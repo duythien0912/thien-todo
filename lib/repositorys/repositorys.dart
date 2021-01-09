@@ -28,10 +28,12 @@ class TodoRepositorys {
     }
   }
 
-  Future add(ToDoData todo) async => await boxToDo.add(ToDoData(title: todo.title.trim(), complete: todo.complete));
+  Future add(ToDoData todo) async => await boxToDo
+      .add(ToDoData(title: todo.title.trim(), complete: todo.complete));
   Stream<dynamic> addToDo(AddToDoAction action) async* {
     try {
-      await add(ToDoData(title: action.todo.title.trim(), complete: action.todo.complete));
+      await add(ToDoData(
+          title: action.todo.title.trim(), complete: action.todo.complete));
       yield TodoActionSuccess(todos);
     } on Exception catch (e) {
       yield TodoActionError(e);
@@ -39,7 +41,9 @@ class TodoRepositorys {
   }
 
   Future update(ToDoData todo, ToDoData todoUpdate) async {
-    await todo.copyWith(title: todoUpdate.title, complete: todoUpdate.complete).save();
+    await todo
+        .copyWith(title: todoUpdate.title, complete: todoUpdate.complete)
+        .save();
   }
 
   Stream<dynamic> updateTodo(UpdateTodoAction action) async* {
