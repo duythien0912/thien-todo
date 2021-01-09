@@ -13,7 +13,7 @@ This is a practice for Redux Architecture is using Redux + Redux Epics + Hive wh
 # Demo
 
 <img align="left" width="300" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/demo.gif">
-<img align="left" width="280" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/1.png">
-<img align="left" width="280" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/2.png">
-<img align="left" width="280" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/3.png">
-<img align="left" width="280" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/4.png">
+<img align="left" width="300" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/1.png">
+<img align="left" width="300" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/2.png">
+<img align="left" width="300" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/3.png">
+<img align="left" width="300" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/4.png">
