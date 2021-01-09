@@ -12,8 +12,9 @@ This is a practice for Redux Architecture is using Redux + Redux Epics + Hive wh
 
 # Demo Gif
 
+<div width="100%">
 <img align="left" width="30%" src="https://raw.githubusercontent.com/duythien0912/thien-todo/master/demo/demo.gif">
-
+</div>
 
 <br/>
 
